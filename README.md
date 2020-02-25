@@ -64,7 +64,7 @@ Remove o produto pelo nome.
 
 ### 4. POST: /api/products
 
-Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price```, as propriedades ```Id``` e ```Created``` são inseridas automáticamente pelo banco de dados.
+Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price```, as propriedades ```Id``` e ```Created``` são inseridas automaticamente pelo banco de dados.
 
   *EXEMPLO*
 
