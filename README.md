@@ -1,7 +1,7 @@
 ## Rotas
 
 
-**1. GET: /api/products/**
+### 1. GET: /api/products/
   
   Retorna a lista dos produtos em ordem decrescente do último produto cadastrado.
   Caso passados os parâmetros ```page``` (Indice da página) e ```totalItens``` (Total de itens a serem exibidos por página) o retorno será uma lista páginada.
@@ -9,7 +9,7 @@
   *EXEMPLO*
   
   **URL:**
-  ```/api/products/page=1&totalItens=2```
+  ```/api/products?page=1&totalItens=2```
   
   **Retorno em Json:**
         
@@ -19,7 +19,7 @@
 		"Id" : 12,
 	    	"Name" : "Produto 1",
             	"Price": 23.50,
-            	"Created": "2020/11/21"
+            	"Created": "2020/11/22"
          },
          {
 	        "Id" : 13,
@@ -29,8 +29,10 @@
          }
 ]
 ```
+
+Em Headers são retornados ```X-Pagination-TotalPages``` (Total de páginas) e ```X-Pagination-NextPage``` (Link para a próxima página se houver).
   
-**2. GET: /api/products/{name}**
+### 2. GET: /api/products/{name}
 
 Retorna o produto cadastrado pelo nome.
 
@@ -51,7 +53,7 @@ Retorna o produto cadastrado pelo nome.
 ```
 
 
-**3. DELETE: /api/products/{name}**
+### 3. DELETE: /api/products/{name}
 
 Remove o produto pelo nome.
 
@@ -62,16 +64,16 @@ Remove o produto pelo nome.
 
 
 
-**4. POST: /api/products**
+### 4. POST: /api/products
 
-Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price```, as propriedades ```Id``` e ```Created``` são inseridas automáticamente pelo banco de dados.
+Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price```, as propriedades ```Id``` e ```Created``` são inseridas automaticamente pelo banco de dados.
 
   *EXEMPLO*
 
   **URL:**
   ```/api/products```
   
-  **Json:**
+  **Json de Entrada:**
 
 ```json
 {
