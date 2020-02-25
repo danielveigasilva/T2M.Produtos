@@ -71,7 +71,7 @@ Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price
   **URL:**
   ```/api/products```
   
-  **Json:**
+  **Json de Entrada:**
 
 ```json
 {
