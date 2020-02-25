@@ -86,7 +86,10 @@ namespace T2MProdutos.Controllers
 
                 bool insert = productRepository.Insert(product);
                 if (!insert)
-                    return Conflict();
+                {
+                    var error = new { Message = "Produto Já Cadastrado" };
+                    return this.Content(HttpStatusCode.Conflict, error);
+                }
 
                 return Ok();
             }
