@@ -29,6 +29,8 @@
          }
 ]
 ```
+
+Em Headers são retornados ```X-Pagination-TotalPages``` (Total de páginas) e ```X-Pagination-NextPage``` (Link para a próxima página se houver).
   
 ### 2. GET: /api/products/{name}
 
