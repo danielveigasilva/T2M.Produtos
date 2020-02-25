@@ -7,24 +7,35 @@ namespace T2MProdutos.Models
 {
     public class ProductRepository : IProductRepository
     {
+        public IEnumerable<Product> GetAllPage(int page, int totalItens)
+        {
+            return DalHelper.GetAllProductsPage(page, totalItens);
+        }
+
         public IEnumerable<Product> GetAll()
         {
             return DalHelper.GetAllProducts();
         }
 
-        public void Delete(string Name)
+        public int GetTotalPages(int totalItens)
         {
-            DalHelper.DeleteProduct(Name);
+            return DalHelper.GetTotalPages(totalItens);
         }
 
         public Product FindByName(string Name)
         {
-            return DalHelper.FindByName(Name);
+            return DalHelper.FindProductByName(Name);
         }
 
-        public void Insert(Product product)
+        public bool DeleteByName(string Name)
         {
-            DalHelper.InsertProduct(product);
+            return DalHelper.DeleteProductByName(Name);
         }
+
+        public bool Insert(Product product)
+        {
+            return DalHelper.InsertProduct(product);
+        }
+
     }
 }

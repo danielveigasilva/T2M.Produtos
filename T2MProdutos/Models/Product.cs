@@ -10,7 +10,6 @@ namespace T2MProdutos.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public DateTime Created { get; set; }
+        public string Created { get; set; }
     }
-
 }
