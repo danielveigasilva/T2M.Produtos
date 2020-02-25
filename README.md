@@ -1,6 +1,7 @@
 ## Rotas
 
 1. **GET: /api/products/**
+  
   Retorna a lista dos produtos em ordem decrescente do último produto cadastrado.
   Caso passados os parâmetros ```page``` (Indice da página) e ```totalItens``` (Total de itens a serem exibidos por página) o retorno será uma lista páginada.
   
@@ -8,7 +9,8 @@
   ```/api/products/page=1&totalItens=2```
   
   Json:
-        ```json
+        
+	```json
         [
           {
 	          "Id" : 12,
