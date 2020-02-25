@@ -1,6 +1,7 @@
 ## Rotas
 
-1. **GET: /api/products/**
+
+**1. GET: /api/products/**
   
   Retorna a lista dos produtos em ordem decrescente do último produto cadastrado.
   Caso passados os parâmetros ```page``` (Indice da página) e ```totalItens``` (Total de itens a serem exibidos por página) o retorno será uma lista páginada.
@@ -29,7 +30,7 @@
 ]
 ```
   
-2. **GET: /api/products/{name}**
+**2. GET: /api/products/{name}**
 
 Retorna o produto cadastrado pelo nome.
 
@@ -49,7 +50,8 @@ Retorna o produto cadastrado pelo nome.
 }
 ```
 
-3. **DELETE: /api/products/{name}**
+
+**3. DELETE: /api/products/{name}**
 
 Remove o produto pelo nome.
 
@@ -58,7 +60,9 @@ Remove o produto pelo nome.
 **URL:**
   ```/api/products/Produto 1```
 
-4. **POST: /api/products**
+
+
+**4. POST: /api/products**
 
 Cadastra um novo produto. Devem ser passados os valores de ```Name``` e ```Price```, as propriedades ```Id``` e ```Created``` são inseridas automáticamente pelo banco de dados.
 
