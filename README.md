@@ -9,7 +9,7 @@
   *EXEMPLO*
   
   **URL:**
-  ```/api/products/page=1&totalItens=2```
+  ```/api/products?page=1&totalItens=2```
   
   **Retorno em Json:**
         
